@@ -1,7 +1,5 @@
-node('slave') {
-    def choice1
-    def choice2
-
+pipeline {
+    agent { docker { image 'node:6.3' } }
     stage ('Select'){
         choice1 = input( id: 'userInput', message: 'Select your choice', parameters: [ [$class: 'ChoiceParameterDefinition', choices: 'aa\nbb', description: '', name: ''] ])
         if(choice1.equals("aa")){
