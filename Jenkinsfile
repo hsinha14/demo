@@ -1,3 +1,5 @@
+checkout(scm: [$class: 'GitSCM', userRemoteConfigs: [[url: "https://github.com/hsinha14/demo.git"], [name: "origin"]], branches: [[name: "master"]]])
+
 pipeline {
   environment {
          vari = ""
